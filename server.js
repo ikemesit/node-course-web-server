@@ -49,6 +49,13 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/portfolio', (req, res) => {
+    res.render('portfolio.hbs', {
+        pageTitle: 'Portfolio Page',
+        message: 'Welcome to my Portfolio!'
+    });
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         error: 'Unable to send data'
